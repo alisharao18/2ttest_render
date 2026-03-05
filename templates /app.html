@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Sample t-Test</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f2f6ff;
+            text-align:center;
+            margin-top:50px;
+        }
 
+        .box{
+            width:400px;
+            margin:auto;
+            padding:25px;
+            background:white;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        input,select{
+            width:90%;
+            padding:8px;
+            margin:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#4a6ee0;
+            color:white;
+            border:none;
+            border-radius:5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Two Sample t-Test Calculator</h2>
+
+<form action="/calculate" method="POST">
+
+<label>Sample 1 (comma separated)</label><br>
+<input type="text" name="sample1" placeholder="2,4,5,6"><br>
+
+<label>Sample 2 (comma separated)</label><br>
+<input type="text" name="sample2" placeholder="1,3,4,7"><br>
+
+<label>Alternative Hypothesis</label><br>
+<select name="alt">
+<option value="two-sided">Two Sided</option>
+<option value="greater">Greater</option>
+<option value="lesser">Lesser</option>
+</select><br>
+
+<button type="submit">Calculate</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
